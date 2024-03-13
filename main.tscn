@@ -1,0 +1,29 @@
+[gd_scene load_steps=3 format=3 uid="uid://blvg648xq0j1j"]
+
+[ext_resource type="Script" path="res://main.gd" id="1_en7gb"]
+[ext_resource type="Texture2D" uid="uid://lbuvgvxvwoy2" path="res://IMG-20230918-WA0000.jpg" id="2_82yhi"]
+
+[node name="Main" type="Node2D"]
+script = ExtResource("1_en7gb")
+
+[node name="Play" type="Button" parent="."]
+offset_left = 71.0
+offset_top = 23.0
+offset_right = 407.0
+offset_bottom = 251.0
+text = "Play"
+
+[node name="Quit" type="Button" parent="."]
+offset_left = 128.0
+offset_top = 387.0
+offset_right = 335.0
+offset_bottom = 600.0
+text = "Quit"
+
+[node name="Img-20230918-wa0000" type="Sprite2D" parent="."]
+position = Vector2(908, 356.25)
+scale = Vector2(0.624074, 0.526751)
+texture = ExtResource("2_82yhi")
+
+[connection signal="pressed" from="Play" to="." method="_on_play_pressed"]
+[connection signal="pressed" from="Quit" to="." method="_on_quit_pressed"]
